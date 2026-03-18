@@ -8,7 +8,7 @@ const router = express.Router();
  * GET /api/pharmacies/:id
  * Get pharmacy profile
  */
-router.get('/:id', (req: AuthRequest, res: Response) => {
+router.get('/:id', (_req: AuthRequest, res: Response) => {
   // TODO: Get pharmacy details
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -17,7 +17,7 @@ router.get('/:id', (req: AuthRequest, res: Response) => {
  * GET /api/pharmacies
  * List pharmacies (searchable)
  */
-router.get('/', (req: AuthRequest, res: Response) => {
+router.get('/', (_req: AuthRequest, res: Response) => {
   // TODO: List pharmacies
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -26,7 +26,7 @@ router.get('/', (req: AuthRequest, res: Response) => {
  * PUT /api/pharmacies/me
  * Update own pharmacy profile
  */
-router.put('/me', authorize('pharmacy'), (req: AuthRequest, res: Response) => {
+router.put('/me', authorize('pharmacy'), (_req: AuthRequest, res: Response) => {
   // TODO: Update pharmacy details
   res.status(501).json({ error: 'Not implemented' });
 });

@@ -8,7 +8,7 @@ const router = express.Router();
  * GET /api/users/me
  * Get current user profile
  */
-router.get('/me', (req: AuthRequest, res: Response) => {
+router.get('/me', (_req: AuthRequest, res: Response) => {
   // TODO: Return authenticated user profile
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -17,7 +17,7 @@ router.get('/me', (req: AuthRequest, res: Response) => {
  * GET /api/users/:id
  * Get user by ID (admin only)
  */
-router.get('/:id', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.get('/:id', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Get user details
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -26,7 +26,7 @@ router.get('/:id', authorize('admin'), (req: AuthRequest, res: Response) => {
  * PUT /api/users/:id
  * Update user profile
  */
-router.put('/:id', (req: AuthRequest, res: Response) => {
+router.put('/:id', (_req: AuthRequest, res: Response) => {
   // TODO: Update user
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -35,7 +35,7 @@ router.put('/:id', (req: AuthRequest, res: Response) => {
  * GET /api/users
  * List all users (admin only)
  */
-router.get('/', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.get('/', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: List users with pagination
   res.status(501).json({ error: 'Not implemented' });
 });

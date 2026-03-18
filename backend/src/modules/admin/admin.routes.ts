@@ -8,7 +8,7 @@ const router = express.Router();
  * GET /api/admin/dashboard
  * Admin dashboard with system metrics
  */
-router.get('/dashboard', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.get('/dashboard', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Return key metrics
   // - Total users by role
   // - Prescription volume
@@ -21,7 +21,7 @@ router.get('/dashboard', authorize('admin'), (req: AuthRequest, res: Response) =
  * GET /api/admin/users
  * List all users for admin review
  */
-router.get('/users', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.get('/users', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Return paginated user list
   // Include verification status
   res.status(501).json({ error: 'Not implemented' });
@@ -31,7 +31,7 @@ router.get('/users', authorize('admin'), (req: AuthRequest, res: Response) => {
  * PUT /api/admin/users/:id/verify
  * Approve/verify new user registration
  */
-router.put('/users/:id/verify', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.put('/users/:id/verify', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Verify doctor/pharmacy credentials
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -40,7 +40,7 @@ router.put('/users/:id/verify', authorize('admin'), (req: AuthRequest, res: Resp
  * PUT /api/admin/users/:id/deactivate
  * Deactivate a user
  */
-router.put('/users/:id/deactivate', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.put('/users/:id/deactivate', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Deactivate user account
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -49,7 +49,7 @@ router.put('/users/:id/deactivate', authorize('admin'), (req: AuthRequest, res: 
  * GET /api/admin/reports
  * Generate system reports
  */
-router.get('/reports', authorize('admin'), (req: AuthRequest, res: Response) => {
+router.get('/reports', authorize('admin'), (_req: AuthRequest, res: Response) => {
   // TODO: Return analytics
   // - Prescription trends
   // - Usage by role
