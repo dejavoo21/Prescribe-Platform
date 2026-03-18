@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Response } from 'express';
 import { authorize } from '../../middleware/authorization';
 import { AuthRequest } from '../../middleware/authentication';
 
@@ -8,7 +8,7 @@ const router = express.Router();
  * GET /api/doctors/:id
  * Get doctor profile
  */
-router.get('/:id', (req: AuthRequest, res) => {
+router.get('/:id', (req: AuthRequest, res: Response) => {
   // TODO: Get doctor profile with specialties, schedule
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -17,7 +17,7 @@ router.get('/:id', (req: AuthRequest, res) => {
  * GET /api/doctors
  * List doctors (searchable)
  */
-router.get('/', (req: AuthRequest, res) => {
+router.get('/', (req: AuthRequest, res: Response) => {
   // TODO: List doctors with search/filter
   res.status(501).json({ error: 'Not implemented' });
 });
@@ -26,7 +26,7 @@ router.get('/', (req: AuthRequest, res) => {
  * PUT /api/doctors/me
  * Update own doctor profile
  */
-router.put('/me', authorize('doctor'), (req: AuthRequest, res) => {
+router.put('/me', authorize('doctor'), (req: AuthRequest, res: Response) => {
   // TODO: Update doctor profile
   res.status(501).json({ error: 'Not implemented' });
 });
