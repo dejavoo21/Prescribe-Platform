@@ -1,0 +1,51 @@
+{
+  "name": "@prescribe-platform/backend",
+  "version": "0.1.0",
+  "description": "Prescribe Platform - E-Prescription Backend API",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "db:migrate": "ts-node src/scripts/migrate.ts",
+    "db:seed": "ts-node src/scripts/seed.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.10.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "joi": "^17.10.1",
+    "pino": "^8.16.1",
+    "pino-http": "^8.4.0",
+    "redis": "^4.6.10",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/node": "^20.8.0",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/supertest": "^6.0.3",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1",
+    "vitest": "^3.0.0",
+    "supertest": "^7.0.0",
+    "eslint": "^8.51.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
